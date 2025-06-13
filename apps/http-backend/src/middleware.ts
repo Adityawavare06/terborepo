@@ -12,7 +12,7 @@ export function Middleware(req : Request, res:Response , next : NextFunction) {
 
     if((decode as JwtPayload).userId) {
         //ts-ignore   TODO : fix this 
-                 req.userId=  (decoded.userId;
+                 req.userId= decoded.userId;
                  next(); 
     }else {
         res.status(403).json({
